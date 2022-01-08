@@ -1,0 +1,17 @@
+#header{
+  background-color: darkgreen;
+}
+
+.geering{
+  font-size: 30px;
+  background-color: black;
+}
+
+.main .geering {
+  color :red;
+}
+
+.product .geering {
+  color :blue;
+  font-size: 25px;
+}
