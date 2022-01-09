@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* a{
+  display: block;
+}
+
+p{
+  display: inline;
+} */
+
+a,p{
+  background-color: green;
+  padding: 10px;
+  margin: 20px;
+}
