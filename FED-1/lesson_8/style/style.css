@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#products{
+    background-color: #487eb0;
+    height: 100vh;
+    font-size: 0;
+    text-align: center;
+}
+
+#products div{
+    font-size: 15px;
+    width: 250px;
+    height: 300px;
+    background-color: #353b48;
+    display: inline-block;
+    margin: 10px;
+    color : white;
+    text-align: left;
+    padding: 20px;
+    vertical-align: middle;
+}
+
