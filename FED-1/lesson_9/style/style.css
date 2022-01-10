@@ -1,0 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#products{
+  height: 100vh;
+  background-color: blue;
+  color: white;
+  font-size: 60px;
+  display: flex ;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#products div{
+  width: 200px;
+  height: 200px;
+  background-color: tomato;
+  margin: 10px;
+}
