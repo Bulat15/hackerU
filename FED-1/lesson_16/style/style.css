@@ -1,0 +1,50 @@
+.save input{
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -100;
+    opacity: 0;
+}
+
+.save input:checked+label{
+    color: red;
+}
+
+.save label{
+    display: inline-block;
+    margin: 1px;
+    width: 60px;
+    height: 26px;
+    background-color: #bdc3c7;
+    border-radius: 13px;
+    position: relative;
+    transition: background-color 0.5s;
+}
+
+.save label:after{
+    position: absolute;
+    transition: left 0.5s;
+    left:2px;
+    top: 2px;
+    content: '';
+    width: 22px;
+    height: 22px;
+    background-color: #ecf0f1;
+    border-radius: 50%;
+}
+
+.save input:focus+label{
+    margin: 0;
+    border: 2px solid blue;
+    /*outline: -webkit-focus-ring-color auto 1px;*/
+}
+
+.save input:checked+label{
+    background-color: #2ecc71;
+    /*outline: -webkit-focus-ring-color auto 1px;*/
+}
+
+.save input:checked+label:after{
+    left: 36px;
+    /*outline: -webkit-focus-ring-color auto 1px;*/
+}

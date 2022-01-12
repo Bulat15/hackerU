@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+    </head>
+    <body>
+        <form method="GET" action="">
+            <div>
+                <label for="inputElement">Ваше имя:</label>
+                <input id="inputElement" name="name">
+            </div>
+            <div>
+                <label for="input_email">Ваше почту</label>
+                <input type="email" id="input_email" name="email">
+            </div>
+            <div>
+                <label for="input_pwd">Ваше пароль</label>
+                <input type="password" id="input_pwd" name="password">
+            </div>
+            <div>
+                <label for="input_age">Введите число</label>
+                <input min="0" type="number" id="input_age" name="number">
+            </div>
+            <div>
+                <label for="input_phone">Ваш телефон</label>
+                <input type="tel" id="input_phone" name="tel">
+            </div>
+            <div>
+                <label for="input_message">Введите текст</label>
+                <!--<input type="tel" id="input_phone">-->
+                <textarea id="input_message"></textarea>
+            </div>
+            <div class="save">
+                <input type="checkbox" id="input_save" name="save">
+                <label for="input_save"></label>
+            </div>
+            <div>
+                <p>Укажите пол</p>
+                 <div>
+                     <input type="radio" id="input_gender_M" name="gender" value="M">
+                        <label for="input_gender_M">Мужской</label>
+                </div>
+                 <div>
+                        <input type="radio" id="input_gender_F" name="gender" value="F">
+                        <label for="input_gender_F">Женский</label>
+                </div>
+            </div>
+            <div>
+                <label for="input_city">Укажите город проживания</label>
+                <select id="input_city" name="city">
+                    <option value="er">Ереван</option>
+                    <option value="mc">Москва</option>
+                    <option value="kv">Киев</option>
+                </select>
+            </div>
+            <button type="submit">Отправить</button>
+        </form>
+        
+<!--        <form action="https://reqres.in/api/users" method="POST">
+            <div>
+                <label for="inputElement">Ваше имя:</label>
+                <input id="inputElement" name="name">
+            </div>
+            <div>
+                <label for="input_job">Ваше работу</label>
+                <input id="input_job" name="job">
+            </div>
+            <button type="submit">Отправить</button>
+        </form>-->
+
+        
+    </body>
+</html>
