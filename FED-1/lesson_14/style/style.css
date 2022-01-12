@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#products{
+  background-color: grey;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#products div{
+  background-color: green;
+  width: 200px;
+  height: 250px;
+  margin: 20px;
+  position: relative;
+}
+
+#products div.sale:after{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: -25px;
+  bottom: -25px;
+  background-image: url('https://avatars.mds.yandex.net/i?id=f0eedeb409b724664a480eef6adfd651-5870148-images-thumbs&n=13');
+  background-size: cover;
+}
+
+.sale{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: -25px;
+  bottom: -25px;
+}
