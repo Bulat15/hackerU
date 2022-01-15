@@ -1,0 +1,98 @@
+/* div{
+  width: 50px;
+  height: 50px;
+  background-color: green;
+} */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  position: relative;
+}
+
+.info div{
+  border: 2px solid black;
+  min-height: 50px;
+  margin: 15px;
+  padding: 30px;
+}
+
+.main{
+  background-color: blue;
+}
+
+.shadow{
+  box-shadow: 10px 10px 10px black;
+}
+
+.positiv{
+  background-color: green;
+}
+
+.negative{
+  background-color: red;
+}
+
+li{
+  margin: 5px;
+  padding: 5px;
+}
+
+.positiv li{
+  border: 2px solid black;
+}
+
+.opinion ul{
+  color: darkblue;
+}
+
+nav{
+  height: 100px;
+  background-color: #95a5a6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* width: 98%; */
+  /* flex-direction: column; */
+}
+
+nav div{
+  background-color: goldenrod;
+  color: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease ;
+}
+
+nav div:hover{
+  box-shadow: 3px 3px 5px black;
+}
+
+nav .active{
+  background-color: green;
+}
+
+.box{
+  background-color: grey;
+  border-radius: 15px;
+  width: 50px;
+  height: 50px;
+  right: 20px;
+  bottom: 20px;
+  position: fixed;
+  transition: background-color 0.5s ease ;
+  /* top: 150px; */
+}
+
+.box:hover{
+  background-color: rgb(66, 65, 65);
+}
