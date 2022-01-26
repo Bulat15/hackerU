@@ -3,9 +3,10 @@
   padding: 0;
 }
 
-body{
+/*body{
   position: relative;
-}
+  width: 100%;
+}*/
 
 .header{
   height: 100px;
@@ -15,6 +16,10 @@ body{
   align-items: center;
   padding: 10px 25px;
   position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 }
 
 .header-menu{
@@ -41,3 +46,93 @@ body{
 .header-menu .header-menu-item:hover{
   border-color: green;
 } 
+
+.body{
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  align-items: center;
+}
+
+body div{
+  padding: 25px;
+}
+
+.image_ellipse{
+    text-align: center;
+    justify-content: space-between;
+}
+.image_ellipse img{
+    padding: 5px;
+}
+
+.body_text .text{
+    word-wrap:break-word;
+}
+
+.many_image .one_block_image,.two_block_image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.many_image .one_block_image div, .two_block_image div{
+    font-size: 15px;
+    width: 250px;
+    height: 300px;
+    background-color: #353b48;
+    display: inline-block;    
+    margin: 10px;
+    color : white;
+    text-align: left;
+    padding: 20px;
+    vertical-align: middle;
+    position: relative;
+    transition: box-shadow 0.5s ease;
+}
+
+.two_block_image div:hover{
+  box-shadow: 3px 3px 5px black;
+}
+
+.one_block_image div:hover{
+    box-shadow: 3px 3px 5px black;
+}
+
+.many_image div img{
+    margin-bottom: 5px;
+    width: 100%;
+    height: auto;
+}
+.many_image p{    
+    right: 20px;
+    bottom: 20px;
+}
+
+.address{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.address .address_text{
+    /*background-color: yellow;*/
+    width: 50%;
+    text-align: center;
+}
+
+.text-p {
+    padding: 5px;
+}
+
+.e-mail{
+    text-decoration: underline;
+}
+
+.address .image_address{    
+    width: 50%;
+    height: 50%;
+}
+
+
