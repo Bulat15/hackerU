@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" method="POST">
+    <div class="field">
+      <label for="name">введите имя</label>
+      <input id="name" name="name">
+    </div>
+    <div class="field">
+      <label for="last_name_input" for="name">введите фамилию</label>
+      <input id="last_name_input" type="text" name="lastname">
+    </div>
+    <div class="field">
+      <label for="textarea" for="name">опишите задачу</label>
+      <textarea id="textarea"></textarea>
+    </div>
+    <div class="field">
+      <label for="email" for="name">введите e-mail</label>
+      <input id="email" type="email">
+    </div>
+    <div class="field">
+      <label for="phone">введите телефон</label>
+      <input id="phone" type="tel">
+    </div>
+    <div class="field">
+      <label for="password">введите пароль</label>
+      <input id="password" type="password">
+    </div>
+    <div class="field">
+      <p>Выберите домашнее животное</p>
+      <div class="values">
+        
+        <input id="cat_pet_input" type="checkbox"  name="pet" value="cat">
+        <label for="cat_pet_input">🐱</label>
+
+        <input id="dog_pet_input" type="checkbox"  name="pet" value="dog">
+        <label for="dog_pet_input">🐕</label>
+
+        <input id="fish_pet_input" type="checkbox"  name="pet" value="fish">
+        <label for="fish_pet_input">🐟 </label>
+      </div>
+      
+    </div>
+    <button>отправить</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+form{
+  width: 400px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.field{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.field>label{
+  width: 45%;
+}
+
+
+textarea{
+     resize: none;
+}
+
+.field+.field{
+  margin-top: 20px;
+}
+
+.field input, .field textarea{
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.field input:focus{
+  border-bottom:  2px solid red;
+}
+
+.field textarea:focus{
+  border-bottom:  2px solid red;
+  border-right:  2px solid red;
+}
+
+form button{
+  align-self: end;
+  border: none;
+  background-color: transparent;
+  border: 2px solid black;
+  cursor: pointer;
+  padding: 10px;
+}
+
+form button:hover{
+  border-color: red;
+}
+
+.field .values{
+  display: flex;
+  align-items: center;
+}
+
+/* .field input[type="checkbox"]{
+  width: 13px;
+  height: 13px;
+} */
+
+.field .values{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+
+.field .values input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -1000px;
+}
+
+.field .values label{
+  text-shadow: 2px solid transparent ;
+  transition: text-shadow .5s ease, border-bottom .5s ease, transform .5s ease;
+}
+
+.field .values label:hover{
+  text-shadow: 0 0 15px black ;
+}
+
+.field .values input:checked+label{
+    border-bottom: 2px solid black ;
+}
+
+.field .values input:focus+label{
+  transform: scale(1,5);
+}
