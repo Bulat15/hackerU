@@ -2,3 +2,74 @@
   margin: 0;
   padding: 0;
 }
+
+.header{
+  height: 100px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.header-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .header-menu-item{
+  color: black;
+  padding: 20px;
+  text-align: center;
+  transition: text-decoration 0.5s ease;
+}
+
+.header-menu-item:hover{
+  text-decoration: underline;
+} 
+
+.sm{
+  /* margin-left: 50px; */
+  display: flex;
+  justify-content: center;
+  /* width: 100px; */
+  list-style: none;
+  font-size: 50px;
+}
+
+.sm a{
+  color: black;
+  display: flex;
+  padding: 0 20px;
+  text-decoration: none;
+}
+.sm li{
+  position: relative;
+}
+
+.sm li+li::after{
+  content: '';
+  position: absolute;
+  height: 50%;
+  width: 1px;
+  left: 0;
+  top: 25%;
+  background-color: black;
+}
+
+.body{
+    height: 600px;
+    background-color: black;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.body .text-photo .big-text-photo{
+  color: white;
+}
