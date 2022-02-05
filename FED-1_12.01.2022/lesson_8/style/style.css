@@ -1,0 +1,26 @@
+[data-text]{
+  background-color: BLUE;
+  margin-top: 50px;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  background-image: url("../../../img/rick_space.jpg");
+  overflow: hidden;
+}
+
+[data-text]:hover::after{
+  opacity: 1;
+  /* top: auto; */
+  bottom: 0;
+}
+
+[data-text]::after{
+  /* content: ''; */
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  padding: 10px;
+  bottom: -30%;
+  content: attr(data_text);
+  opacity: 0;
+  transition: opacity .5s ease;
+}

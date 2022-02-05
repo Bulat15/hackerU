@@ -1,38 +1,8 @@
 *{
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
-
-.header{
-  height: 100px;
-  background-color: #fafafa;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 25px;
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
-.header-menu{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
- .header-menu-item{
-  color: black;
-  padding: 20px;
-  text-align: center;
-  transition: text-decoration 0.5s ease;
-}
-
-.header-menu-item:hover{
-  text-decoration: underline;
-} 
 
 .sm{
   /* margin-left: 50px; */
@@ -63,13 +33,328 @@
   background-color: black;
 }
 
-.body{
-    height: 600px;
-    background-color: black;
-    display: flex;
-    /* justify-content: space-between; */
+nav{
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	height: 104px;
+	background-color: whitesmoke;
+	align-items: center;
+	width: 100%;
 }
 
-.body .text-photo .big-text-photo{
-  color: white;
+.header_text a{
+	margin: 0 135px;
+	width: 30%;
+        color: black;
 }
+
+.header_text a:hover{
+    text-decoration: underline;
+}
+
+.menu+.menu{
+	margin-left: 40px;
+}
+
+.menu:hover{
+	text-decoration: underline 2px hotpink;
+}
+
+.btn_img{
+	margin: 0 135px;
+	width: 18%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu{
+	font-family: Roboto;
+	font-style: normal;
+	/*font-weight: bold;*/
+	font-size: 20px;
+	line-height: 23px;
+	color: black;
+}
+
+.line{
+	border: 1px solid hotpink;
+	transform: rotate;
+}
+
+.links{
+	height: 45px;
+	width: 45px;
+}
+
+main>div{
+	width: 50%;
+}
+
+main {
+	display: flex;
+	height: 965px;
+	width: 100%;
+	background-color: black;
+}
+
+main #photo{
+	display: flex;
+	justify-content: center;
+}
+
+
+main #photo img{
+	margin-top: 110px;
+}
+
+main .text {
+	margin-top: 268px;
+	color: white;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 50px;
+	line-height: 117px;
+}
+
+.line_name{
+	border: 7px solid green;
+	width: 40%;
+}
+
+.quote{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 30px;
+	margin-top: 50px;
+}
+
+
+.story{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 23px;
+}
+
+section>div{
+	width: 50%;
+}
+
+section {
+	display: flex;
+	align-items: center;
+	background-color: black;
+}
+
+section #landscape{
+	margin: 50px;
+}
+
+section .story{
+	margin: 50px;
+        color: white;
+}
+
+.top{
+	height: 272px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+}
+
+.top h1{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 70px;
+	line-height: 82px;
+	margin-left: 140px;
+}
+
+.it{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 23px;
+	padding: 50px 120px 50px 120px;
+	background-color: black;
+        color:white;
+}
+
+.plans{
+    color:white;
+}
+
+.technologies{
+	margin: 100px;
+	margin-bottom: 0;
+}
+
+#GITHUB{
+	background-color: white;
+}
+
+.technologies>img{
+	float: left;
+}
+
+.prog{
+	float: right;
+	margin: 15px;
+}
+
+.programming{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 35px;
+}
+
+.line_prog{
+	border: 2px solid hotpink;
+	width: 120%;
+	margin: 10px 0;
+}
+
+.importance{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 18px;
+}
+
+.logos{
+	height: 100px;
+	width: 100px;
+}
+
+.technologies:hover{
+	transform: scale(1.3);
+}
+
+.grid{
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 15px;
+  grid-auto-rows: 400px;
+}
+
+.grid div{
+    margin: 20px;
+}
+
+
+ .inner-grid-1{
+  background-image: url('../image/image_6.jpg');
+  background-size: cover;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 1;
+ }
+ .inner-grid-2{
+  background-image: url('../image/image_16.jpg');
+  background-size: cover; 
+  padding-top: 10%; 
+  grid-column-start: 2;
+  grid-column-end: 2;
+ }
+ .inner-grid-3{
+  background-image: url('../image/image_17.jpg');
+  background-size: cover; 
+  display: block;   
+  grid-column-start: 2;
+  grid-column-end: 2;
+ }
+ .inner-grid-4{
+  background-image: url('../image/image_7.jpg');
+  background-size: cover;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 3;
+ }
+ 
+   
+ 
+ @media (max-width: 1200px){
+    #photo img{
+         display: none;
+     }
+     #landscape{
+         display: none;
+     }
+     .grid{
+        display: grid;
+        /*grid-template-columns: repeat(3,1fr);*/
+        /*padding: 15px;*/
+        grid-auto-rows: 200px;
+      }
+
+      .inner-grid-1{
+        background-image: url('../image/image_6.jpg');
+        background-size: cover;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+       }
+       .inner-grid-2{
+        background-image: url('../image/image_16.jpg');
+        background-size: cover; 
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+       }
+       .inner-grid-3{
+        background-image: url('../image/image_17.jpg');
+        background-size: cover; 
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+       }
+       .inner-grid-4{
+        background-image: url('../image/image_7.jpg');
+        background-size: cover;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+       }  
+       
+       nav{
+	justify-content: center;
+        }
+       
+       .header_text a{
+            margin: 0;
+        }
+        
+        .btn_img{
+            margin: 0 135px;
+            display: flex;
+            justify-content:flex-start;
+        }
+        
+        .menu+.menu{
+	margin-left: 0;
+        }
+        
+        .menu{
+	margin-left: 0;
+        }
+    
+ }
+ 
+ 
