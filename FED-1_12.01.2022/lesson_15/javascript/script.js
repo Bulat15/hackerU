@@ -62,7 +62,7 @@ function handler(obj){
     
 }
 
-handler(obj);
+handler(obj); 
 
 
 // console.log(handler([2,5,1],[3,5,6],[7,5,9]));
