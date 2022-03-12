@@ -1,0 +1,31 @@
+#main h1 {
+  color: green;
+}
+#main div {
+  background-color: pink;
+}
+#main div > a {
+  font-size: 20px;
+}
+
+#photoc h2 {
+  color: purple;
+}
+#photoc div {
+  background-color: pink;
+}
+#photoc div > a {
+  font-size: 20px;
+}
+
+#products h2 {
+  color: blue;
+}
+#products div {
+  background-color: pink;
+}
+#products div > a {
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */
