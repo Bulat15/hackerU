@@ -1,0 +1,27 @@
+$dark-font-color: #22356F
+$light-font-color: #ffffff
+
+$accent-color: #F9B640
+
+*
+    margin: 0
+    padding: 0
+
+a
+    text-decoration: none
+    color: $dark-font-color
+
+
+@mixin mix_button($bg-color: $accent-color, $color: $light-font-color)
+    background-color: $bg-color
+    color: $color
+    width: 150px
+    height: 50px
+    display: flex
+    border-radius: 25px
+    justify-content: center
+    align-items: center
+
+@import 'main'
+@import 'nav'
+@import 'servises'
