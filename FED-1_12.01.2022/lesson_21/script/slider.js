@@ -30,6 +30,29 @@ slider_film.append(...imgList.map(img_name=>{
 	return divElem
 }))
 
+const render = ()=>{
+	const windows_wigth = slider_main.offsetWidth;
+	slider_film.style.right = windows_wigth * imgIndex + 'px';
+}
+
+slider_trigger_left.addEventListener('click', ()=>{
+	if (imgIndex > 0){
+		imgIndex--;
+	}else{
+		imgIndex = imgList.length - 1;
+	}
+	render()
+});
+
+slider_trigger_right.addEventListener('click', ()=>{
+	if (imgList.length - 1 > imgIndex){
+		imgIndex++;
+	}else{
+		imgIndex = 0;
+	}
+	render()
+});
+
 
 
 

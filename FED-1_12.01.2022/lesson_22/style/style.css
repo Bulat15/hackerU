@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding: 0 50px;
+}
+nav .logo {
+  width: 100px;
+  height: 100px;
+}
+nav .logo img {
+  width: 100%;
+  height: 100%;
+}
+nav .menu {
+  display: flex;
+  justify-content: space-between;
+}
+nav .points {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  width: 300px;
+  justify-content: space-between;
+}
+nav .points li {
+  position: relative;
+  padding: 10px;
+}
+nav .points li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  top: 100%;
+  background-color: black;
+  transition: width 0.5s ease, left 0.5s ease;
+}
+nav .points li:hover::after {
+  width: 100%;
+  left: 0;
+}
+nav .btns a {
+  border: 2px solid blue;
+  padding: 10px;
+  color: red;
+  transition: color 0.5s ease, background 0.5s ease;
+}
+nav .nav-btn {
+  width: 50px;
+  height: 50px;
+  background-color: none;
+  border: 2px solid blue;
+  display: flex;
+  font-size: 45px;
+  justify-content: center;
+  align-items: center;
+  justify-self: flex-end;
+  cursor: pointer;
+  display: none;
+}
+nav .nav-btn:hover {
+  background-color: grey;
+  color: darkgreen;
+}
+
+@media (max-width: 810px) {
+  nav {
+    position: relative;
+  }
+  nav .menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    flex-deriction: column;
+    width: 300px;
+    display: none;
+  }
+  nav .points {
+    flex-direction: column;
+    width: auto;
+  }
+  nav .btns {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  nav .nav-btn {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

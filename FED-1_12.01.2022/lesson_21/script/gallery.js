@@ -42,7 +42,7 @@ gallery_trigger_left.addEventListener('click', ()=>{
 		imgIndex = imgList.length - 1;
 	}
 	render()
-	console.log(imgIndex);
+	// console.log(imgIndex);
 });
 
 gallery_trigger_right.addEventListener('click', ()=>{
@@ -53,7 +53,7 @@ gallery_trigger_right.addEventListener('click', ()=>{
 		imgIndex = 0;
 	}
 	render()
-	console.log(imgIndex);
+	// console.log(imgIndex);
 });
 
 

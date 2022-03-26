@@ -10,18 +10,20 @@
 
 	.slider-main
 		overflow: hidden
-		position: relative
+		// position: relative
 
 	.slider-film
-		position: absolute
+		position: relative
 		display: flex
 		width: 2500px
+		right: 0
+		transition: right 0.7s cubic-bezier(0,-1.08, 1, 1.63)
 
 		&>div
 			width: 500px
 			height: 500px
-
-
+			background-size: cover
+			background-position: center
 	.slider-trigger
 		position: absolute
 		left: 0
