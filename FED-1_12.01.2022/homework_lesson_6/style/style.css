@@ -14,14 +14,34 @@
 .grid div{
     margin: 20px;
 }
-
-
  .inner-grid-1{
   background-image: url('../image/index2.png');
   background-size: cover;
   grid-column-start: 1;
   grid-column-end: 2;
+  overflow: hidden;
+  position: relative;
  }
+ .inner-grid-1:hover::after{
+	opacity: 1;
+	bottom: 0;
+}
+
+.inner-grid-1::after{
+	background-color: rgba(255, 255, 255, 0.5);
+	position: absolute;
+	bottom: -30%;
+	content: attr(text);
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 14px;
+	color: #000000;
+	padding: 10px;
+	opacity: 0;
+	transition: opacity .5s ease, bottom .5s ease;
+}
  .inner-grid-2{
   background-image: url('../image/index3.png');
   background-size: cover; 
@@ -47,75 +67,146 @@
   grid-column-end: 4;
  }
 
-	
-	 .address{
-	   display: flex;
-	  justify-content: space-around;
-	  padding: 30px;
-	  align-items: center;
-	  width: 100%;
-	  height: 100%;
-	}
+.img{
+	width: 100%;
+	height: 100%;
+}
+.form{
+	display: flex;
+}
 
-	.address .address_text{
-	    /*background-color: yellow;*/
-	    width: 50%;
-	    text-align: center;
-	}
+.info{
+	background-color: #34495E;
+	height: 665px;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-	.text-p {
-	    padding: 5px;
-	}
+.image_address{
+	height: 665px;
+	width: 50%;
+}
 
-	.e-mail{
-	    text-decoration: underline;
-	}
+button{
+	height: 59px;
+	width: 191px;
+	background-color: #34495E;
+	border: 5px solid white;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 29px;
+	color: #FFFFFF;
+	cursor: pointer;
+	margin-left: 370px;
 
-	.address .image_address{    
-	    width: 50%;
-	    height: 50%;
-	}
+}
+
+label{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 29px;
+	color: #FFFFFF;
+}
+
+input{
+	width: 556px;
+	height: 59px;
+}
+
+input{
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 29px;
+	display: flex;
+	align-items: center;
+	color: #000000;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.field{
+	display: flex;
+}
+
+.button{
+	width: 556px;
+	height: 59px;
+}
+
+a{
+	text-decoration: none;
+	font-size: 50px;
+	color: white;
+}
+
+.radio-form .radio-control .radio-input i {
+	color: white;
+	font-size: 70px;
+}
+
+.radio-form .radio-control input {
+    display: none;
+    
+    
+}
+
+.radio-form .radio-control input:checked + .radio-input i{
+	color: red;
+}
  
    
  
- /* @media (max-width: 1200px){
-     .grid{
-        display: grid;
-      }
-
-      .inner-grid-1{
-        background-image: url('../image/image_6.jpg');
-        background-size: cover;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 1;
-       }
-       .inner-grid-2{
-        background-image: url('../image/image_16.jpg');
-        background-size: cover; 
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 1;
-       }
-       .inner-grid-3{
-        background-image: url('../image/image_17.jpg');
-        background-size: cover; 
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 1;
-       }
-       .inner-grid-4{
-        background-image: url('../image/image_7.jpg');
-        background-size: cover;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 2;
-       }  
-    
- } */
+  @media (max-width: 800px){
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(5, 251px);
+    }
+  
+    .inner-grid-1{
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  
+    .inner-grid-2{
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  
+    .inner-grid-3{
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  
+    .inner-grid-4{
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  
+    .inner-grid-5{
+      grid-column-start: 1;
+      grid-column-end: 2;
+    }
+  
+    .form{
+      flex-direction: column;
+    }
+  
+    .info{
+      width: 100%;
+    }
+  
+    .image_address{
+      width: 100%;
+    }
+ } 
  
  
