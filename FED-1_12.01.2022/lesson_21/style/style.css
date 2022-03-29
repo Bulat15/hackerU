@@ -81,7 +81,7 @@
 }
 
 .slider-container {
-  width: 500px;
+  width: 100%;
   height: 500px;
   position: relative;
   margin: 0 auto;
@@ -96,7 +96,6 @@
 .slider-container .slider-film {
   position: relative;
   display: flex;
-  width: 2500px;
   right: 0;
   transition: right 0.7s cubic-bezier(0, -1.08, 1, 1.63);
 }

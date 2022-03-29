@@ -24,16 +24,39 @@ slider_container.append(slider_main, slider_trigger);
 slider_main.append(slider_film);
 rootElem.append(slider_container);
 
-slider_film.append(...imgList.map(img_name=>{
+
+
+
+
+const film_elems = imgList.map(img_name=>{
+	const slider_width = slider_container.offsetWidth;
 	const divElem = document.createElement('div');
+	divElem.style.width = slider_width +'px';
 	divElem.style.backgroundImage = `url('${mediaPath+img_name}')`;
 	return divElem
-}))
-
+});
 const render = ()=>{
-	const windows_wigth = slider_main.offsetWidth;
-	slider_film.style.right = windows_wigth * imgIndex + 'px';
+	const slider_width = slider_container.offsetWidth;
+	slider_film.style.right = slider_width * imgIndex + 'px';
 }
+
+const changeSize =()=>{
+	const slider_width = slider_container.offsetWidth;
+	   slider_film.style.width = slider_width * imgList.length+'px';
+	   film_elems.forEach(elem => elem.style.width = slider_width +'px');
+	   render();
+	}
+	
+	window.addEventListener('resize', changeSize);
+	changeSize()
+
+
+
+
+
+slider_film.append(...film_elems)
+
+
 
 slider_trigger_left.addEventListener('click', ()=>{
 	if (imgIndex > 0){
