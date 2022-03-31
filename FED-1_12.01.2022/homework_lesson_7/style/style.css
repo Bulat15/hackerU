@@ -42,28 +42,28 @@ a{
 	margin: 0 100px;
 }
 
-.name{
-	font-style: normal;
-	font-weight: 400;
-	font-size: 47.3392px;
-	line-height: 60px;
-}
-
 .info{
 	margin: 0 100px;
 	display: flex;
 	flex-direction: row;
 }
 
-.discription{
+.name{
 	font-style: normal;
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 49px;
+	line-height: 50px;
+}
+
+.my_info{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
 	line-height: 23px;
 	color: #070707;
 }
 
-.language{
+.fake_language{
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
@@ -72,7 +72,7 @@ a{
 	transform: rotate(-90deg);
 }
 
-.language:hover{
+.fake_language:hover{
 	color: black;
 }
 
@@ -104,8 +104,8 @@ a{
 .about>p{
 	font-style: normal;
 	font-weight: 400;
+	line-height: 22px;
 	font-size: 18px;
-	line-height: 23px;
 	text-align: center;
 	color: #070707;
 }
@@ -113,8 +113,8 @@ a{
 .short_info{
 	font-style: normal;
 	font-weight: 400;
-	font-size: 34px;
-	line-height: 43px;
+	line-height: 40px;
+	font-size: 35px;
 	color: #070707;
 	text-align: center;
 }
@@ -129,8 +129,8 @@ a{
 .main{
 	font-style: normal;
 	font-weight: 400;
+	line-height: 42px;
 	font-size: 34px;
-	line-height: 43px;
 	text-align: center;
 	color: #070707;
 }
@@ -138,8 +138,8 @@ a{
 .text{
 	font-style: normal;
 	font-weight: 400;
+	line-height: 22px;
 	font-size: 18px;
-	line-height: 23px;
 	text-align: center;
 	color: #070707;
 }
@@ -280,15 +280,15 @@ a{
 .btn{
 	font-style: normal;
 	font-weight: 400;
+	line-height: 22px;
 	font-size: 18px;
-	line-height: 23px;
 	text-align: center;
 	color: white;
 	margin-top: 50px;
 	width: 180px;
 	height: 42px;
 	background-color: black;
-	border-radius: 21px;
+	border-radius: 20px;
 	border: 1px solid black;
 }
 
@@ -348,7 +348,7 @@ a{
 		align-items: flex-start;
 	}
 
-	.lang{
+	.language{
 		display: none;
 	}
 
