@@ -24,6 +24,10 @@ slider_film.append(...imgList.map(img_name=>{
 	return divElem
 }))
 
+const window_height = window.innerHeight;
+slider_film.style.height = window_height + 'px';
+// alert(slider_film.style.height)
+
 const render = ()=>{
 	gallery_main.style.backgroundImage = `url('${mediaPath+imgList[imgIndex]}')`;
 	const liList = document.querySelectorAll('.gallery-points li');
@@ -32,6 +36,7 @@ const render = ()=>{
 	liList[imgIndex].classList.add('active');
 
 	const window_width = gallery_main.offsetWidth;
+	
 	slider_film.style.right = window_width * imgIndex + 'px';
 }
 
