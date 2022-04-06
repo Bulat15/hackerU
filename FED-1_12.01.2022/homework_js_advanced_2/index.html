@@ -4,11 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="fa/css/all.min.css">
     <link rel="stylesheet" href="style/style.css">
     <title>Document</title>
 </head>
 <body>
-    <div id="root"></div>
+    <div class="header">
+
+		<div class="form">
+			<form id="word-form">
+				<div class="input">
+					<div class="field">
+						<input name="word" placeholder="Название">
+					</div>
+
+					<div class="field">
+						<input type="text" name="text" placeholder="Пометки">
+					</div>
+				</div>	
+
+				<input type="submit" value="Добавить" id="button">
+
+			</form>
+		</div>
+	</div>
+
+	<div id="cards"></div>
     <script type="text/javascript" src="script/script.js"></script>
 </body>
 </html>
