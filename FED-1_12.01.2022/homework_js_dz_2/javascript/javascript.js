@@ -2,58 +2,55 @@ const arr = [1,3,5,6,7,8,9,0,22,33,44,55,66,77,88,99,123,234,345,456];
 
 //Ззадание 1
 //- max со значением максимального числа
-
-function max(arr) {
-	let max = arr[0];
-	for (let i = 1; i < arr.length; i++){
-		if (arr[i] > max){
-			max = arr[i];
-		}
-	}
-	return max;
-}
-
-console.log('значение максимального значения массива =', max(arr));
-
 //- min со значением минимального числа
+// - count со значением кол-ва элементов в массиве
+//- avg со значением среднего 
+MyObject = {
+	count : 0,
+	avg : 0,
+	min: 0,
+	max: 0,
+} 
 
-function min(arr){
+console.log(MyObject);
+//{count: 0, avg: 0, min: 0, max: 0}
+
+function avg(arr){
+	let avg = 0;
+	let sum = 0;
+	let count = 0;
 	let min = arr[0];
+	let max = arr[0];
 	for (let i = 1; i < arr.length; i++){
 		if (arr[i] < min){
 			min = arr[i];
 		}
 	}
-	return min;
-}
-
-console.log('значение минимального значения массива =', min(arr));
-
-// - count со значением кол-ва элементов в массиве
-
-function count(arr){
-	let count = 0;
 	for (let i = 0; i < arr.length; i++){
 		count++;
 	}
-	return count;
-}
-
-console.log('значение кол-ва элементов массива =', count(arr));
-
-//- avg со значением среднего 
-
-function avg(arr){
-	let avg = 0;
-	let sum = 0;
 	for (let i = 0; i < arr.length; i++){
 		sum = sum + arr[i];
 	}
+	for (let i = 1; i < arr.length; i++){
+		if (arr[i] > max){
+			max = arr[i];
+		}
+	}
 	avg = sum / arr.length;
-	return avg;
+	MyObject.avg = avg;
+	MyObject.count = count;
+	MyObject.min = min;
+	MyObject.max = max;
+	return 
 }
 
-console.log('значение среднего значения элементов массива =', avg(arr));
+avg(arr)
+
+console.log(MyObject);
+//{id: 1, avg: 84.05, boolval: true}
+
+
 
 //задание 2
 //В данном задании вам необходимо реализовать сумматор. 
