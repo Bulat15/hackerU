@@ -1,0 +1,20 @@
+.main {
+    display: flex;
+    align-items: center;
+    background-color: rgb(205, 164, 244);
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.main__list {
+    display: flex;
+    list-style: none;
+}
+
+.main__list li+li {
+    margin-left: 30px;
+}
+
+.logo img{
+    height: 50px;
+}
