@@ -1,135 +1,101 @@
-.header
-	display: grid
-	grid-template-columns: repeat(3, 1fr)
-	grid-column-gap: 30px
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
 
-	.search
-		border: 2px solid #000000
-		border-radius: 15px
+header
+	position: sticky
+	top: 0
+	background-color: white
+
+#achievement
+	height: 50px
+	display: flex
+	color: white
+
+	div
+		width: 50%
 		display: flex
 		justify-content: center
 		align-items: center
 
-		input
-			width: 100px
-			background: #EBEBEB
-			border-radius: 25px
-			border: none
-			width: 80%
-			height: 35px
-			padding-left: 10px
+	.pos
+		background-color: #27ae60
 
+	.neg
+		background-color: #E74C3C
+	
+form
+	display: flex
+	flex-direction: column
+	justify-content: center
+	width: 300px
+	margin: 35px auto
+
+	h2
+		text-align: center
+
+	*
+		height: 40px
+		margin-bottom: 10px
+
+	input
+		font-size: 20px
+		padding: 0 10px
+		
 		::placeholder
-			font-family: 'Roboto'
-			font-style: normal
-			font-weight: 400
-			font-size: 15px
-			line-height: 23px
 			color: black
 
-	.form
-		grid-column-start: 1
-		grid-column-end: 3
-		border: 2px solid #000000
-		box-sizing: border-box
-		border-radius: 15px
-		
-		form 
+	button
+		border: 2px solid #F39C12
+		background-color: transparent
+		color: #F39C12
+		font-weight: 900
+		cursor: pointer
+
+#deals
+	.empty_info
+		font-size: 30px
+		text-align: center
+
+
+	.triggers
+		display: flex
+		flex-direction: column
+
+		div
+			width: 50px
+			height: 50px
 			display: flex
-			flex-direction: row 
-			justify-content: space-between
+			justify-content: center
 			align-items: center
-			padding: 40px
+			cursor: pointer
 
-			.input
-				display: flex
-				flex-direction: row 
-				justify-content: space-between
-				align-items: center
+	.deal
+		background-color: #34495e
+		display: flex
+		justify-content: space-between
+		align-items: center
 
-				.field + .field
-					margin: 0 20px
+		.info
+			// padding: 15px
+			color: white
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			font-size: 20px
 
-				.field input
-					background: #EBEBEB
-					border-radius: 25px
-					border: none
-					width: 120px
-					height: 35px
-					padding-left: 10px
-					font-family: 'Roboto'
-					font-style: normal
-					font-weight: 400
-					font-size: 15px
-					line-height: 23px
-					color: black
+			div
+				margin: 10px
 
-				::placeholder
-					font-family: 'Roboto'
-					font-style: normal
-					font-weight: 400
-					font-size: 15px
-					line-height: 23px
-					color: black
+		+.deal
+			margin-top: 20px
 
-			#button
-				height: 35px
-				width: 150px
-				background: #68f10d
-				border-radius: 25px
-				border: none
-				font-family: 'Roboto'
-				font-style: normal
-				font-weight: 400
-				font-size: 15px
-				line-height: 23px
-				text-align: center
-				color: #FFFFFF
+.btn_pos
+	background-color: #27ae60
 
-
-
-
-#cards
-	display: grid
-	grid-template-columns: repeat(3, 1fr)
-	grid-column-gap: 50px
-	grid-auto-flow: 100px
-	justify-content: space-between
-	grid-row-gap: 30px
-	margin: 30px 0
-
-
-.card
-	display: flex
-	justify-content: center
-	align-items: center
-	position: relative
-	height: 250px
-	border-radius: 20px
-	font-family: 'Roboto'
-	font-style: normal
-	font-weight: 400
-	font-size: 50px
-	line-height: 59px
-
-.close
-	position: absolute
-	width: 30px
-	height: 30px
-	background-color: #f50a0a
-	display: flex
-	justify-content: center
-	align-items: center
-	color: white
-	font-size: 25px
-	border-radius: 50%
-	top: -15px
-	right: -15px
-	cursor: pointer
-
-
-
-
-
+.btn_neg
+	background-color: #E74c3c
+	
 
 
