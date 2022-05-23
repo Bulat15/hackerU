@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import ToDoList from '../ToDoList'
-import Counter from '../Counter'
+// import Counter from '../Counter'
 import s from './ToDos.module.sass'
 import AddToDo from '../AddToDo';
 
@@ -36,8 +36,8 @@ const deleteTodo = id =>{
     <div className={s.todos}>
         <h1>Дела на сегодня</h1>
         <p>Терпение и труд,все я устал</p>
-        <ToDoList todo={todo} deleteTodo={deleteTodo}/>
         <AddToDo addToDo={addToDo} />
+        <ToDoList todo={todo} deleteTodo={deleteTodo}/>
     </div>
   )
 }

@@ -1,99 +1,113 @@
-const formElem = document.querySelector('form');
+const wordElement = document.querySelector('#word-form');
+const searchElement = document.querySelector('#search-form');
+const cardsElement = document.querySelector('#cards');
 
+const get_cards = () => JSON.parse(localStorage.getItem('cards')) || [];
 
-const get_deals = () => JSON.parse(localStorage.getItem('deals')) || [];
-const get_deals_status = () => JSON.parse(localStorage.getItem('deals_status')) || {done: 0, deny: 0};
+const add_card = card => localStorage.setItem('cards',JSON.stringify([...get_cards(),card]));
 
-const add_deal = deal => localStorage.setItem('deals',JSON.stringify([...get_deals(),deal]));
-
-const remove_deal = deal => {
-	const new_lst = get_deals().filter(elem => JSON.stringify(elem) !== JSON.stringify(deal));
-	localStorage.setItem('deals', JSON.stringify(new_lst)); 
+const remove_card = card => {
+	const new_lst = get_cards().filter(elem => JSON.stringify(elem) !== JSON.stringify(card));
+	localStorage.setItem('cards', JSON.stringify(new_lst)); 
 }
 
-
-const add_pos_status = () =>{
-	const deals_status = get_deals_status();
-	deals_status.done++;
-	localStorage.setItem('deals_status', JSON.stringify(deals_status)); 
-}
-
-
-const add_neg_status = () =>{
-	const deals_status = get_deals_status();
-	deals_status.deny++;
-	localStorage.setItem('deals_status',  JSON.stringify(deals_status)); 
-}
-
-formElem.addEventListener('submit',event => {
+wordElement.addEventListener('submit',event => {
 	event.preventDefault();
-	const {title, description} = event.target;
-	add_deal({
-		title: title.value,
-		description: description.value
+	const {word,translation, color} = event.target;
+	add_card({
+		word: word.value,
+		translation: translation.value,
+		color: color.value
 	});
 
-	render(get_deals());
-	title.value = '';
-	description.value ='';
-})
+	render(get_cards());
+		word.value ='',
+		translation.value ='',
+		color.value =''
+});
 
 function render(lst){
-	const posElem = document.querySelector('.pos span');
-	const negElem = document.querySelector('.neg span');
-	const {done,deny} = get_deals_status();
-	posElem.innerText = done;
-	negElem.innerText = deny;
 
-	const dealsElem = document.querySelector('#deals');
-	dealsElem.innerText = '';
-	if(get_deals().length){
-		dealsElem.append(
-			...get_deals().map(deal=>{
-				const {title,description} = deal;
+	const cardsElem = document.querySelector('#cards');
+	cardsElem.innerText = '';
+	if(get_cards().length){
+		cardsElem.append(
+			...get_cards().map(card=>{
+				const {word,translation, color} = card;
 				const rootElem = document.createElement('div');
-				rootElem.classList.add('deal');
+				rootElem.classList.add('cards');
 
 				const infoElem = document.createElement('div');
-				const titleElem = document.createElement('div');
-				const descrElem = document.createElement('div');
-				infoElem.classList.add('info');
-				titleElem.innerText = title;
-				descrElem.innerText = description;
-				infoElem.append(titleElem,descrElem);
 
-				const buttonsElem = document.createElement('div');
-				const okBtnElem = document.createElement('div');
+				let p = document.createElement('p');
+				p.classList.add('text');
+
+				p.innerText = word;
+
+				infoElem.classList.add('card');
+				infoElem.style.backgroundColor = color;
 				const denBtnElem = document.createElement('div');
-				denBtnElem.innerHTML = '<i class="fa fa-times"></i>';
-				okBtnElem.innerHTML = '<i class="fa fa-check"></i>';
-				buttonsElem.classList.add('triggers');
-				okBtnElem.classList.add('btn_pos');
-				denBtnElem.classList.add('btn_neg');
-				buttonsElem.append(okBtnElem,denBtnElem);
-
-				rootElem.append(infoElem,buttonsElem);
-
-				okBtnElem.addEventListener('click', ()=>{
-					add_pos_status();
-					remove_deal(deal);
-					render();
+				denBtnElem.innerHTML = 'X';
+				denBtnElem.classList.add('close');
+				infoElem.addEventListener('dblclick', () => {
+					if (p.innerText === word) {
+						p.innerText = translation;
+					} else {
+						p.innerText = word;
+					}
 				});
 				denBtnElem.addEventListener('click', ()=>{
-					add_neg_status();
-					remove_deal(deal);
+					remove_card(card);
 					render();
 				})
 
-				return rootElem;
+				infoElem.append(p,denBtnElem);
+				
+				return infoElem;
 			})
 		)
 	}else{
 		const infoElem = document.createElement('p');
 		infoElem.classList.add('empty_info');
-		infoElem.innerText = 'У вас нет дел!';
-		dealsElem.append(infoElem);
+		infoElem.innerText = 'У вас нет карточек для изучения!';
+		cardsElem.append(infoElem);
 	}
 }
 
-render(get_deals());
+function renderSearch(list) {
+	cardsElement.innerHTML = '';
+
+	for (let elem of list) {
+		let card = document.createElement('div');
+		let close = document.createElement('div');
+		let p = document.createElement('p');
+		close.addEventListener('click', () => 
+			card.remove());
+
+		p.classList.add('text');
+		card.classList.add('card');
+		close.classList.add('close');
+		card.append(p, close);
+
+		p.innerText = elem.word;
+		card.style.backgroundColor = elem.color;
+		close.innerText = 'Х';
+
+		card.addEventListener('dblclick', () => {
+			if (p.innerText === elem.word) {
+				p.innerText = elem.translation;
+			} else {
+				p.innerText = elem.word;
+			}
+		});
+
+		cardsElement.append(card);
+	}
+}
+
+searchElement.addEventListener('submit', function (event) {
+	event.preventDefault();
+	renderSearch(get_cards().filter(elem => this.search.value === '' || JSON.stringify(elem.word) === JSON.stringify(this.search.value)));
+});
+
+render(get_cards());

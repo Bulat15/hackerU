@@ -1,4 +1,7 @@
 import React from 'react'
+import Button from '../UI/Button';
+import Input from '../UI/Input';
+import s from './AddToDo.module.sass'
 
 export default function AddToDo({addToDo}) {
 
@@ -10,16 +13,17 @@ export default function AddToDo({addToDo}) {
       description.value ='';
   }
   return (
-    <form onSubmit={submit}>
-      <label>
-        <p>Название</p>
-        <input name ='title' type="text" />
+    <form className={s.form} onSubmit={submit}>
+      <label className={s.field}>
+        {/* <p>Название</p> */}
+        <Input>Название</Input>
       </label>
-      <label>
+      <label className={s.field}>
         <p>Описание</p>
         <textarea name ='description' type="text"></textarea>
       </label>
-      <button>Добавить</button>
+      {/* <button className={s.btn}>Добавить</button> */}
+      <Button></Button>
     </form>
   )
 }
