@@ -9,7 +9,6 @@ import Typography from '@mui/material/Typography';
 
 export default function GridItems({ title, price }) {
     return (
-        <div>
             <Grid item xs={12} sx={{backgroundColor: 'gray'}}>
             <Card sx={{ maxWidth: 345 }}>
                 <CardMedia
@@ -32,7 +31,6 @@ export default function GridItems({ title, price }) {
                 </CardActions>
             </Card>
             </Grid>
-        </div>
         // <Grid item xs={12} mb={4} sx={{ backgroundColor: 'gray' }}>
         //     <p>{title}</p>
         //     <p>{price}</p>

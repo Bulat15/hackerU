@@ -7,7 +7,7 @@ export default function Form() {
                 <TextField label="Имя" variant="standard"></TextField>
                 <TextField label="Фамилия" variant="standard"></TextField>
                 <TextField label="Комментарий" variant="standard" multiline></TextField>
-                <TextField
+                {/* <TextField
                     select
                     label="Роль"
                     SelectProps={{
@@ -18,7 +18,7 @@ export default function Form() {
                 >
                     {['Ученик','Учитель']}
 
-                </TextField>
+                </TextField> */}
                 <Button variant="outlined">Отправить</Button>
             </form>
     )
