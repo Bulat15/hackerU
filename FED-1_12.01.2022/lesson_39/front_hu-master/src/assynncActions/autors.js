@@ -12,7 +12,7 @@ export const fetchAddAutors = (data) =>{
         }
 }
 
-export const getAllAddAutors = () =>{
+export const getAllAddAutors = () =>{ 
     return (dispatch)=> {
          fetch('http://localhost:5000/api/author/all', {
                 method: 'GET',
